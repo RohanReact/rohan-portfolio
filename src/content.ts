@@ -8,7 +8,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/rohan-misal-b48118222",
   github: "https://github.com/Rohanmisal",
   summary:
-    "Full-stack developer with 2+ years building scalable web applications, from the interface through the API to the cloud. I work where clean code meets a real user problem — a React UI, a REST API, or a deploy on Azure — and I like owning that picture until it ships.",
+    "Full-stack developer with 2+ years building scalable web applications, from the interface through the API to the cloud. I work where clean code meets a real user problem — a React UI, a REST API, or a deploy on Azure or Railway — and I like owning that picture until it ships.",
 };
 
 export const roles = [
@@ -53,18 +53,32 @@ export const education = {
   note: "CGPA 8.75",
 };
 
-export const project = {
-  name: "WhatNext AI",
-  url: "https://whatnextai.vercel.app",
-  stack: ["React", "TypeScript", "Supabase", "LLM"],
-  summary:
-    "A web app for people who are stuck. You describe the situation in plain language. It returns three paths — easy, medium, and advanced — each with steps, a timeline, and the tools to start.",
-  points: [
-    "LLM responses are shaped into a fixed structure the UI can render, not a loose paragraph.",
-    "Accounts keep path history. A follow-up chat stays attached to the path you picked.",
-    "Interface in English, Hindi, Bengali, and Tamil. Designed, built, and deployed solo.",
-  ],
-};
+export const projects = [
+  {
+    name: "CBT Studio",
+    url: "https://cbtstudio-production.up.railway.app/",
+    stack: ["React", "TypeScript", "Node.js", "SQLite", "PDF.js", "Railway"],
+    summary:
+      "A SaaS that turns any exam question-paper PDF into a timed computer-based test — palette, mark-for-review, submit, and instant scoring — the way CAT, GATE, MHT-CET, JEE, and CTET feel on screen.",
+    points: [
+      "Parses text and scanned PDFs in the browser, detects sections and booklet sets, and keeps English beside Hindi or Marathi when the paper is bilingual.",
+      "When Unicode text is unreliable, each question stays on the original page crop; answer keys can be uploaded before or after the attempt.",
+      "Accounts, plans, and PDF storage on a single Node server with SQLite. Live on Railway for real testing.",
+    ],
+  },
+  {
+    name: "WhatNext AI",
+    url: "https://whatnextai.vercel.app",
+    stack: ["React", "TypeScript", "Supabase", "LLM"],
+    summary:
+      "A web app for people who are stuck. You describe the situation in plain language. It returns three paths — easy, medium, and advanced — each with steps, a timeline, and the tools to start.",
+    points: [
+      "LLM responses are shaped into a fixed structure the UI can render, not a loose paragraph.",
+      "Accounts keep path history. A follow-up chat stays attached to the path you picked.",
+      "Interface in English, Hindi, Bengali, and Tamil. Designed, built, and deployed solo.",
+    ],
+  },
+];
 
 export const skills = [
   {
@@ -81,7 +95,7 @@ export const skills = [
   },
   {
     label: "Tools",
-    items: ["Azure", "Git", "GitHub"],
+    items: ["Azure", "Railway", "Git", "GitHub"],
   },
 ];
 

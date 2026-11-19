@@ -4,7 +4,7 @@ import {
   education,
   profile,
   languages,
-  project,
+  projects,
   roles,
   skills,
   vestaPoints,
@@ -12,7 +12,7 @@ import {
 
 const nav = [
   { href: "#work", label: "Work" },
-  { href: "#project", label: "Project" },
+  { href: "#project", label: "Projects" },
   { href: "#skills", label: "Skills" },
   { href: "#contact", label: "Contact" },
 ];
@@ -152,24 +152,26 @@ export default function App() {
 
         <section className="block" id="project">
           <div className="block-head">
-            <h2>Selected project</h2>
+            <h2>Selected projects</h2>
           </div>
-          <article className="project">
-            <div className="project-top">
-              <h3>{project.name}</h3>
-              <a href={project.url} target="_blank" rel="noreferrer">
-                Live site
-                <span aria-hidden="true"> ↗</span>
-              </a>
-            </div>
-            <p className="stack">{project.stack.join(" · ")}</p>
-            <p className="detail">{project.summary}</p>
-            <ul className="points">
-              {project.points.map((point) => (
-                <li key={point}>{point}</li>
-              ))}
-            </ul>
-          </article>
+          {projects.map((project) => (
+            <article className="project" key={project.name}>
+              <div className="project-top">
+                <h3>{project.name}</h3>
+                <a href={project.url} target="_blank" rel="noreferrer">
+                  Live site
+                  <span aria-hidden="true"> ↗</span>
+                </a>
+              </div>
+              <p className="stack">{project.stack.join(" · ")}</p>
+              <p className="detail">{project.summary}</p>
+              <ul className="points">
+                {project.points.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
         </section>
 
         <section className="block" id="skills">
